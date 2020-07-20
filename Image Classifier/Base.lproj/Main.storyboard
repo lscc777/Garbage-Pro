@@ -76,12 +76,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7Z-Iw-3Kk">
+                                <rect key="frame" x="150" y="318" width="134" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="aRk-OT-vxI"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ba5-mV-EBz"/>
                     <connections>
+                        <outlet property="garbageCategroy" destination="I7Z-Iw-3Kk" id="t0i-2V-GO7"/>
                         <outlet property="garbageImage" destination="sF5-VD-qT4" id="kzD-zJ-hps"/>
                         <outlet property="garbageName" destination="bTo-6s-dD3" id="eFH-aZ-2aW"/>
                     </connections>

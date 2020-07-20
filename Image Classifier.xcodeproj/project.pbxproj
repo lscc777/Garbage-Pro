@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		414574FE24C58DC500562CC5 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414574FD24C58DC500562CC5 /* GarbageViewController.swift */; };
+		4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 414574FF24C5939000562CC5 /* TextClassifier.mlmodel */; };
 		4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */; };
 		BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FC87A2393AE4D00070084 /* AppDelegate.swift */; };
 		BC8FC87D2393AE4D00070084 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FC87C2393AE4D00070084 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		414574FD24C58DC500562CC5 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
+		414574FF24C5939000562CC5 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TextClassifier.mlmodel; sourceTree = "<group>"; };
 		4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		BC8FC8772393AE4D00070084 /* Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8FC87A2393AE4D00070084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				BC8FC87C2393AE4D00070084 /* ViewController.swift */,
 				414574FD24C58DC500562CC5 /* GarbageViewController.swift */,
 				4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */,
+				414574FF24C5939000562CC5 /* TextClassifier.mlmodel */,
 				BC8FC87E2393AE4D00070084 /* Main.storyboard */,
 				BC8FC8812393AE6A00070084 /* Assets.xcassets */,
 				BC8FC8832393AE6A00070084 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8FC87D2393AE4D00070084 /* ViewController.swift in Sources */,
+				4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */,
 				BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */,
 				414574FE24C58DC500562CC5 /* GarbageViewController.swift in Sources */,
 				4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */,

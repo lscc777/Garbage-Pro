@@ -14,6 +14,8 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate, AVCaptureV
 
     var captureSession: AVCaptureSession!
     
+    var image: UIImage?
+    
     @IBOutlet weak var imageClassifierLabel: UILabel!
     
     override func viewDidLoad() {
@@ -46,6 +48,11 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate, AVCaptureV
         
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
+        let attachments = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
+        let ciImage = CIImage(cvImageBuffer: imageBuffer, options: (attachments as! [CIImageOption : Any]))
+
+        image = UIImage(ciImage: ciImage)
+        
         guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
         
         let coreMLRequest = VNCoreMLRequest(model: model) { (finishedRequest, Error) in
@@ -65,6 +72,15 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate, AVCaptureV
         try? VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:]).perform([coreMLRequest])
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "takePhoto" {
+            let vc = segue.destination as! GarbageViewController
+            vc.image = self.image
+            vc.name = self.imageClassifierLabel.text
+        }
+    }
     
 }
 

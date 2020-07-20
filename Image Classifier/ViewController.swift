@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController,AVCapturePhotoCaptureDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     var captureSession: AVCaptureSession!
     
@@ -72,6 +72,10 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate, AVCaptureV
         try? VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:]).perform([coreMLRequest])
     }
 
+    
+}
+
+extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -81,6 +85,6 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate, AVCaptureV
             vc.name = self.imageClassifierLabel.text
         }
     }
-    
+
 }
 

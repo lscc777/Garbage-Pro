@@ -21,7 +21,7 @@
 		414574FD24C58DC500562CC5 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
 		414574FF24C5939000562CC5 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TextClassifier.mlmodel; sourceTree = "<group>"; };
 		4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
-		BC8FC8772393AE4D00070084 /* Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8FC8772393AE4D00070084 /* Garbage Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garbage Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8FC87A2393AE4D00070084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8FC87C2393AE4D00070084 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC8FC87F2393AE4D00070084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		BC8FC8782393AE4D00070084 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC8FC8772393AE4D00070084 /* Image Classifier.app */,
+				BC8FC8772393AE4D00070084 /* Garbage Pro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			);
 			name = "Image Classifier";
 			productName = "Image Classifier";
-			productReference = BC8FC8772393AE4D00070084 /* Image Classifier.app */;
+			productReference = BC8FC8772393AE4D00070084 /* Garbage Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -304,7 +304,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsc.Image-Classifier";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Garbage Pro";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsc.Image-Classifier";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Garbage Pro";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

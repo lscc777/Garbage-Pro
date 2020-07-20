@@ -24,7 +24,7 @@ class GarbageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         garbageImage.image = image
-        garbageName.text = name
+        garbageName.text = "垃圾名称: \(name!)"
         
         guard let predictionResult = try? textMlmodel.prediction(text: name!) else {
             fatalError("Predicting errors!")
@@ -32,7 +32,7 @@ class GarbageViewController: UIViewController {
 
         if let result = categroy[predictionResult.label] {
             print(result)
-            garbageCategroy.text = result
+            garbageCategroy.text = "垃圾种类: \(result)"
         }
     }
     

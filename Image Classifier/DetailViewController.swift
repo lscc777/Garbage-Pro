@@ -1,15 +1,15 @@
 //
-//  GarbageViewController.swift
+//  DetailViewController.swift
 //  Image Classifier
 //
-//  Created by 刘思程 on 2020/7/20.
+//  Created by 刘思程 on 2020/8/2.
 //  Copyright © 2020 LafuenteR. All rights reserved.
 //
 
 import UIKit
 import Foundation
 
-class GarbageViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     var image: UIImage?
     var name: String?

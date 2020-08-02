@@ -80,7 +80,7 @@ extension ViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "takePhoto" {
-            let vc = segue.destination as! GarbageViewController
+            let vc = segue.destination as! DetailViewController
             vc.image = self.image
             vc.name = self.imageClassifierLabel.text
         }

@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </scene>
-        <!--Garbage View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="pMZ-gG-zSZ">
             <objects>
-                <viewController id="OJn-O7-fza" customClass="GarbageViewController" customModule="Garbage_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="OJn-O7-fza" customClass="DetailViewController" customModule="Garbage_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k64-t9-aFh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

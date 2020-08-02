@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		414574FE24C58DC500562CC5 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414574FD24C58DC500562CC5 /* GarbageViewController.swift */; };
 		4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 414574FF24C5939000562CC5 /* TextClassifier.mlmodel */; };
 		4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */; };
+		41CDF66C24D6D9D700EFF136 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */; };
 		BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FC87A2393AE4D00070084 /* AppDelegate.swift */; };
 		BC8FC87D2393AE4D00070084 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FC87C2393AE4D00070084 /* ViewController.swift */; };
 		BC8FC8802393AE4D00070084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8FC87E2393AE4D00070084 /* Main.storyboard */; };
@@ -18,9 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		414574FD24C58DC500562CC5 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
 		414574FF24C5939000562CC5 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TextClassifier.mlmodel; sourceTree = "<group>"; };
 		4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BC8FC8772393AE4D00070084 /* Garbage Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garbage Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8FC87A2393AE4D00070084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8FC87C2393AE4D00070084 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			children = (
 				BC8FC87A2393AE4D00070084 /* AppDelegate.swift */,
 				BC8FC87C2393AE4D00070084 /* ViewController.swift */,
-				414574FD24C58DC500562CC5 /* GarbageViewController.swift */,
+				41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */,
 				4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */,
 				414574FF24C5939000562CC5 /* TextClassifier.mlmodel */,
 				BC8FC87E2393AE4D00070084 /* Main.storyboard */,
@@ -147,7 +147,7 @@
 				BC8FC87D2393AE4D00070084 /* ViewController.swift in Sources */,
 				4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */,
 				BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */,
-				414574FE24C58DC500562CC5 /* GarbageViewController.swift in Sources */,
+				41CDF66C24D6D9D700EFF136 /* DetailViewController.swift in Sources */,
 				4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

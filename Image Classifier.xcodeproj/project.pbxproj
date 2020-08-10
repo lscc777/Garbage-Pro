@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410AD11C24E1380100144B9C /* CategroyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AD11B24E1380100144B9C /* CategroyViewController.swift */; };
+		410AD11E24E13C9400144B9C /* RecyclableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AD11D24E13C9400144B9C /* RecyclableViewController.swift */; };
 		4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 414574FF24C5939000562CC5 /* TextClassifier.mlmodel */; };
 		4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */; };
 		41CDF66C24D6D9D700EFF136 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410AD11B24E1380100144B9C /* CategroyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroyViewController.swift; sourceTree = "<group>"; };
+		410AD11D24E13C9400144B9C /* RecyclableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableViewController.swift; sourceTree = "<group>"; };
 		414574FF24C5939000562CC5 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TextClassifier.mlmodel; sourceTree = "<group>"; };
 		4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +66,9 @@
 			children = (
 				BC8FC87A2393AE4D00070084 /* AppDelegate.swift */,
 				BC8FC87C2393AE4D00070084 /* ViewController.swift */,
+				410AD11B24E1380100144B9C /* CategroyViewController.swift */,
 				41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */,
+				410AD11D24E13C9400144B9C /* RecyclableViewController.swift */,
 				4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */,
 				414574FF24C5939000562CC5 /* TextClassifier.mlmodel */,
 				BC8FC87E2393AE4D00070084 /* Main.storyboard */,
@@ -148,7 +154,9 @@
 				4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */,
 				BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */,
 				41CDF66C24D6D9D700EFF136 /* DetailViewController.swift in Sources */,
+				410AD11C24E1380100144B9C /* CategroyViewController.swift in Sources */,
 				4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */,
+				410AD11E24E13C9400144B9C /* RecyclableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

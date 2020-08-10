@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UIViewControllerTransitioningDelegate {
 
     var captureSession: AVCaptureSession!
     
@@ -72,6 +72,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         try? VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:]).perform([coreMLRequest])
     }
 
+    @IBAction func categroy(_ sender: Any) {
+        let categroyVC = storyboard!.instantiateViewController(withIdentifier: "CategoryVC") as! CategroyViewController
+        
+        categroyVC.transitioningDelegate = self
+        categroyVC.modalPresentationStyle = .fullScreen
+        present(categroyVC, animated: true, completion: nil)
+
+    }
     
 }
 

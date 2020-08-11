@@ -306,7 +306,7 @@
 				COREML_CODEGEN_LANGUAGE = Automatic;
 				DEVELOPMENT_TEAM = TS394A4PJX;
 				INFOPLIST_FILE = "Image Classifier/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +326,7 @@
 				COREML_CODEGEN_LANGUAGE = Automatic;
 				DEVELOPMENT_TEAM = TS394A4PJX;
 				INFOPLIST_FILE = "Image Classifier/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

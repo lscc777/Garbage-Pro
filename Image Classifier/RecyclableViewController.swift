@@ -13,10 +13,20 @@ class RecyclableViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
     
+    var num = 1
+    var images = ["1","2","3","4"]
+    var msg = [
+    "可回收物是指经加工可以成为生产原料或者经过处理可以再利用的物品，主要包括废纸、塑料、金属、玻璃等。",
+    "其他垃圾俗称“干垃圾”。包括除上述几类垃圾之外的砖瓦陶瓷、尘土、卫生间废纸、纸巾等。",
+    "厨余垃圾俗称“湿垃圾”，包括居民家庭产生的剩菜剩饭、菜根菜叶、瓜果皮核渣、动物内脏、过期食品等食品废物以及农贸市场的有机垃圾。",
+    "有害垃圾是指垃圾中对人体健康或自然环境造成直接或潜在危害的物质。包括废充电电池、灯管、废水银温度计、废油漆桶、过期药品等日常用品，这些垃圾需要特殊安全处理。"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.image.image = UIImage(named: images[num-1])
+        self.label.text = msg[num-1]
+        
     }
     
 

@@ -9,31 +9,35 @@
 import UIKit
 
 class CategroyViewController: UIViewController, UIViewControllerTransitioningDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func recyclable(_ sender: Any) {
-        let recyclableVC = storyboard!.instantiateViewController(withIdentifier: "RecyclableVC") as! RecyclableViewController
         
-        recyclableVC.transitioningDelegate = self
-        recyclableVC.modalPresentationStyle = .fullScreen
-        present(recyclableVC, animated: true, completion: nil)
-
-    }
     
-    
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        switch segue.identifier {
+        case "1":
+            let vc = segue.destination as! RecyclableViewController
+            vc.num = 1
+        case "2":
+            let vc = segue.destination as! RecyclableViewController
+            vc.num = 2
+        case "3":
+            let vc = segue.destination as! RecyclableViewController
+            vc.num = 3
+        case "4":
+            let vc = segue.destination as! RecyclableViewController
+            vc.num = 4
+        default:
+            return
+        }
+        
     }
-    */
-
+    
+    
 }

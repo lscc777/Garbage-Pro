@@ -10,6 +10,7 @@
 		410AD11C24E1380100144B9C /* CategroyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AD11B24E1380100144B9C /* CategroyViewController.swift */; };
 		410AD11E24E13C9400144B9C /* RecyclableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AD11D24E13C9400144B9C /* RecyclableViewController.swift */; };
 		4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 414574FF24C5939000562CC5 /* TextClassifier.mlmodel */; };
+		417C09FB24E979B900E4C087 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C09FA24E979B900E4C087 /* SearchViewController.swift */; };
 		4188BEB824C2B66800DB2E41 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */; };
 		41CDF66C24D6D9D700EFF136 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */; };
 		BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FC87A2393AE4D00070084 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		410AD11B24E1380100144B9C /* CategroyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroyViewController.swift; sourceTree = "<group>"; };
 		410AD11D24E13C9400144B9C /* RecyclableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableViewController.swift; sourceTree = "<group>"; };
 		414574FF24C5939000562CC5 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TextClassifier.mlmodel; sourceTree = "<group>"; };
+		417C09FA24E979B900E4C087 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BC8FC8772393AE4D00070084 /* Garbage Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garbage Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				410AD11B24E1380100144B9C /* CategroyViewController.swift */,
 				41CDF66B24D6D9D700EFF136 /* DetailViewController.swift */,
 				410AD11D24E13C9400144B9C /* RecyclableViewController.swift */,
+				417C09FA24E979B900E4C087 /* SearchViewController.swift */,
 				4188BEB724C2B66800DB2E41 /* ImageClassifier.mlmodel */,
 				414574FF24C5939000562CC5 /* TextClassifier.mlmodel */,
 				BC8FC87E2393AE4D00070084 /* Main.storyboard */,
@@ -153,6 +156,7 @@
 			files = (
 				BC8FC87D2393AE4D00070084 /* ViewController.swift in Sources */,
 				4145750024C5939000562CC5 /* TextClassifier.mlmodel in Sources */,
+				417C09FB24E979B900E4C087 /* SearchViewController.swift in Sources */,
 				BC8FC87B2393AE4D00070084 /* AppDelegate.swift in Sources */,
 				41CDF66C24D6D9D700EFF136 /* DetailViewController.swift in Sources */,
 				410AD11C24E1380100144B9C /* CategroyViewController.swift in Sources */,

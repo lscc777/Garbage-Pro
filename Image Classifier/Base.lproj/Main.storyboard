@@ -44,6 +44,15 @@
                                     <action selector="categroy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tH6-K8-pJD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-Yy-ED3">
+                                <rect key="frame" x="20" y="53" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <segue destination="raZ-Qc-uj1" kind="presentation" id="HRf-fY-PeW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -62,7 +71,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+            <point key="canvasLocation" x="-346" y="416"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="5fU-n7-JPJ">
+            <objects>
+                <viewController id="raZ-Qc-uj1" customClass="SearchViewController" customModule="Garbage_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t3q-Ou-gPh" customClass="Sear">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="垃圾名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7J-hX-idE">
+                                <rect key="frame" x="20" y="168" width="374" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-WL-qPt">
+                                <rect key="frame" x="0.0" y="90" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-kl-A4j">
+                                <rect key="frame" x="372" y="90" width="42" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="search:" destination="raZ-Qc-uj1" eventType="touchUpInside" id="lPy-nQ-4Kz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="垃圾种类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-dH-AQk">
+                                <rect key="frame" x="20" y="243" width="374" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5ke-KK-Gj8"/>
+                    </view>
+                    <connections>
+                        <outlet property="category" destination="244-dH-AQk" id="GJS-tq-oar"/>
+                        <outlet property="name" destination="A7J-hX-idE" id="7Ks-9i-yVg"/>
+                        <outlet property="textField" destination="kJI-WL-qPt" id="ROZ-LN-tS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kTb-Af-b3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447.82608695652175" y="199.55357142857142"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="pMZ-gG-zSZ">
@@ -103,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJb-lS-d46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950.72463768115949" y="596.65178571428567"/>
+            <point key="canvasLocation" x="448" y="858"/>
         </scene>
         <!--Categroy View Controller-->
         <scene sceneID="bdL-BA-WbY">
@@ -159,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlb-05-CtD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950.72463768115949" y="-129.24107142857142"/>
+            <point key="canvasLocation" x="1249" y="-200"/>
         </scene>
         <!--Recyclable View Controller-->
         <scene sceneID="oYM-9u-Vr9">
@@ -180,27 +239,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="S4Y-w3-Ymj">
+                                <rect key="frame" x="44" y="486" width="326" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sG7-Fc-FvU"/>
                     </view>
                     <connections>
+                        <outlet property="detail" destination="S4Y-w3-Ymj" id="Ato-Bc-Fen"/>
                         <outlet property="image" destination="kYS-gl-8MS" id="tWW-X3-AHa"/>
                         <outlet property="label" destination="EGO-rP-ic4" id="nmK-Gq-mQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXz-Du-NwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="-129"/>
+            <point key="canvasLocation" x="1977" y="-199"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Syh-j5-fKc"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="1" width="890.5" height="944.5"/>
-        <image name="2" width="881" height="944.5"/>
-        <image name="3" width="879" height="944.5"/>
-        <image name="4" width="878" height="944.5"/>
+        <image name="1" width="180" height="180"/>
+        <image name="11" width="111" height="81"/>
+        <image name="2" width="180" height="180"/>
+        <image name="3" width="180" height="180"/>
+        <image name="4" width="180" height="180"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
     </resources>
 </document>

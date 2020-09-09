@@ -11,10 +11,13 @@ import AVKit
 import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UIViewControllerTransitioningDelegate {
-
+    
     var captureSession: AVCaptureSession!
     
     var image: UIImage?
+    
+    var args: Dictionary<String,Int> = [:]
+    var count = 0
     
     @IBOutlet weak var imageClassifierLabel: UILabel!
     
@@ -30,6 +33,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         captureSession.addInput(input)
         
+        //        try? captureDevice.lockForConfiguration()
+        //        captureDevice.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 200)
+        //        captureDevice.activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: 200)
+        //        captureDevice.unlockForConfiguration()
+        
         captureSession.startRunning()
         
         let capturePreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -39,6 +47,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         let captureDataOutput = AVCaptureVideoDataOutput()
         captureDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+        
         captureSession.addOutput(captureDataOutput)
         
     }
@@ -46,12 +55,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
-        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        connection.videoOrientation = AVCaptureVideoOrientation.portrait
+        let imageBuffer: CVPixelBuffer = sampleBuffer.imageBuffer!
+        let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
+        image = self.convert(cmage: ciimage)
         
-        let attachments = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
-        let ciImage = CIImage(cvImageBuffer: imageBuffer, options: (attachments as! [CIImageOption : Any]))
-
-        image = UIImage(ciImage: ciImage)
+        //        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        //        let attachments = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
+        //        let ciImage = CIImage(cvImageBuffer: imageBuffer, options: (attachments as! [CIImageOption : Any]))
+        //
+        //        image = UIImage(ciImage: ciImage)
+        
         
         guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
         
@@ -64,21 +78,54 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             print(firstObservation.identifier, firstObservation.confidence)
             
             DispatchQueue.main.async {
-                self.imageClassifierLabel.text = String(firstObservation.identifier) 
+                
+                if var iter = self.args[String(firstObservation.identifier)]{
+                    iter += 1
+                }else{
+                    self.args.updateValue(1, forKey: String(firstObservation.identifier))
+                }
+                
+                self.count += 1
+                
+                if (self.count >= 50){
+                    var max = String(firstObservation.identifier)
+                    var max_i = self.args[max]
+                    for item in self.args {
+                        if item.value > max_i! {
+                            max = item.key
+                            max_i = item.value
+                        }
+                    }
+                    
+                    self.imageClassifierLabel.text = max
+                    
+                    self.count = 0
+                    self.args = [:]
+                }
+                
+                
             }
             
         }
         
         try? VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:]).perform([coreMLRequest])
     }
-
+    
+    // Convert CIImage to CGImage
+    func convert(cmage:CIImage) -> UIImage {
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
+    
     @IBAction func categroy(_ sender: Any) {
         let categroyVC = storyboard!.instantiateViewController(withIdentifier: "CategoryVC") as! CategroyViewController
         
         categroyVC.transitioningDelegate = self
         categroyVC.modalPresentationStyle = .fullScreen
         present(categroyVC, animated: true, completion: nil)
-
+        
     }
     
 }
@@ -93,6 +140,6 @@ extension ViewController {
             vc.name = self.imageClassifierLabel.text
         }
     }
-
+    
 }
 

@@ -76,7 +76,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 
                 self.count += 1
                 
-                if (self.count >= 20){
+                if (self.count >= 10){
                     var max = String(firstObservation.identifier)
                     var max_i = self.args[max]
                     for item in self.args {
@@ -100,18 +100,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         try? VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:]).perform([coreMLRequest])
     }
     
-    // Convert CIImage to CGImage
-    func convert(cmage:CIImage) -> UIImage {
-        let context:CIContext = CIContext.init(options: nil)
-        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
-        let image:UIImage = UIImage.init(cgImage: cgImage)
-        return image
-    }
-    
-    func initMsg() {
-        self.count = 0
-        self.args = [:]
-    }
 
     
     @IBAction func categroy(_ sender: Any) {
@@ -138,6 +126,18 @@ extension ViewController {
         }
     }
     
+    // Convert CIImage to CGImage
+    func convert(cmage:CIImage) -> UIImage {
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
     
+    func initMsg() {
+        self.count = 0
+        self.args = [:]
+    }
+
 }
 

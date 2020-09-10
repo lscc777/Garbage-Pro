@@ -16,7 +16,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var image: UIImage?
     
-    var args: Dictionary<String,Int> = [:]
+    var args = Dictionary<String,Int>()
     var count = 0
     
     @IBOutlet weak var imageClassifierLabel: UILabel!
@@ -38,7 +38,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let capturePreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         view.layer.addSublayer(capturePreviewLayer)
         capturePreviewLayer.frame = view.frame
-        capturePreviewLayer.bounds.size.height = self.view.bounds.size.height
+        capturePreviewLayer.bounds.size.height = self.view.bounds.size.height - 200
         
         let captureDataOutput = AVCaptureVideoDataOutput()
         captureDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
@@ -136,7 +136,7 @@ extension ViewController {
     
     func initMsg() {
         self.count = 0
-        self.args = [:]
+        self.args = [String:Int]()
     }
 
 }

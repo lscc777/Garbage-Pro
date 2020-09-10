@@ -15,54 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在识别..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzI-4C-yyE">
-                                <rect key="frame" x="18" y="808" width="378" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garbage Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-Ov-leB">
-                                <rect key="frame" x="33" y="77" width="348" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Garbage Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-Ov-leB">
+                                <rect key="frame" x="143" y="71" width="129.5" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxQ-Q3-cJw">
-                                <rect key="frame" x="168" y="749" width="78" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxQ-Q3-cJw">
+                                <rect key="frame" x="182" y="744" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="识别"/>
+                                <state key="normal" image="classifier"/>
                                 <connections>
                                     <segue destination="OJn-O7-fza" kind="show" identifier="takePhoto" id="mIe-rR-vWG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0x-gf-aRx">
-                                <rect key="frame" x="341" y="44" width="55" height="62"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0x-gf-aRx">
+                                <rect key="frame" x="351" y="63" width="43" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="分类"/>
+                                <state key="normal" image="classify"/>
                                 <connections>
                                     <action selector="categroy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tH6-K8-pJD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-Yy-ED3">
-                                <rect key="frame" x="20" y="53" width="45" height="45"/>
+                                <rect key="frame" x="20" y="64" width="43" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <state key="normal" image="search1"/>
                                 <connections>
                                     <segue destination="raZ-Qc-uj1" kind="presentation" id="HRf-fY-PeW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正在识别..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzI-4C-yyE">
+                                <rect key="frame" x="114" y="802" width="187" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.33293953539999999" green="0.93730401990000001" blue="0.76852744819999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SpO-Ov-leB" secondAttribute="trailing" constant="33" id="79i-WB-eAd"/>
-                            <constraint firstItem="SpO-Ov-leB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="E4O-pe-lki"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzI-4C-yyE" secondAttribute="trailing" constant="18" id="Eov-AV-Xgg"/>
-                            <constraint firstItem="SpO-Ov-leB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Pca-D5-YDb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yzI-4C-yyE" secondAttribute="bottom" constant="33" id="WkM-kN-gRi"/>
-                            <constraint firstItem="yzI-4C-yyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="rVB-RV-7E3"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -71,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="416"/>
+            <point key="canvasLocation" x="-346.37681159420293" y="415.84821428571428"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="5fU-n7-JPJ">
@@ -89,19 +82,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-WL-qPt">
-                                <rect key="frame" x="20" y="90" width="354" height="34"/>
+                                <rect key="frame" x="20" y="90" width="348" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-kl-A4j">
-                                <rect key="frame" x="372" y="90" width="42" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="magnifyingglass" catalog="system"/>
-                                <connections>
-                                    <action selector="search:" destination="raZ-Qc-uj1" eventType="touchUpInside" id="lPy-nQ-4Kz"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="垃圾种类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-dH-AQk">
                                 <rect key="frame" x="20" y="243" width="374" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,6 +94,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76p-FY-cKY">
+                                <rect key="frame" x="376" y="90" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="search2"/>
+                                <connections>
+                                    <action selector="search:" destination="raZ-Qc-uj1" eventType="touchUpInside" id="pbC-YM-X9K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5ke-KK-Gj8"/>
@@ -268,6 +261,9 @@
         <image name="2" width="180" height="180"/>
         <image name="3" width="180" height="180"/>
         <image name="4" width="180" height="180"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="classifier" width="50" height="50"/>
+        <image name="classify" width="50" height="50"/>
+        <image name="search1" width="50" height="50"/>
+        <image name="search2" width="50" height="50"/>
     </resources>
 </document>

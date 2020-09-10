@@ -18,7 +18,6 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     
     let textMlmodel = TextClassifier()
     let categroy = ["1": "可回收垃圾", "2": "有害垃圾", "4": "湿垃圾", "8": "干垃圾", "16": "大型垃圾"]
-
     var text: String = ""
     
     @IBAction func search(_ sender: Any) {

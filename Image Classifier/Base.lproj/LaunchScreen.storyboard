@@ -15,15 +15,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Garbage Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yN-Sv-v1d">
-                                <rect key="frame" x="127" y="251" width="161" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="bMd-Cv-hqe">
+                                <rect key="frame" x="79" y="292.5" width="256" height="311"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1024" translatesAutoresizingMaskIntoConstraints="NO" id="Ox4-HT-tHX">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garbage Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yN-Sv-v1d">
+                                        <rect key="frame" x="47.5" y="275" width="161" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.48211532829999998" green="0.92945832009999996" blue="0.62344712020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bMd-Cv-hqe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="R9O-j2-RMz"/>
+                            <constraint firstItem="bMd-Cv-hqe" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XOb-SZ-rSx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -32,4 +43,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1024" width="256" height="256"/>
+    </resources>
 </document>

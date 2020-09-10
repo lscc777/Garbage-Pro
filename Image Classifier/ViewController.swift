@@ -32,12 +32,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
         
         captureSession.addInput(input)
-        
-        //        try? captureDevice.lockForConfiguration()
-        //        captureDevice.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 200)
-        //        captureDevice.activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: 200)
-        //        captureDevice.unlockForConfiguration()
-        
+                
         captureSession.startRunning()
         
         let capturePreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -59,13 +54,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let imageBuffer: CVPixelBuffer = sampleBuffer.imageBuffer!
         let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
         image = self.convert(cmage: ciimage)
-        
-        //        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        //        let attachments = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
-        //        let ciImage = CIImage(cvImageBuffer: imageBuffer, options: (attachments as! [CIImageOption : Any]))
-        //
-        //        image = UIImage(ciImage: ciImage)
-        
+                
         
         guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
         
@@ -87,7 +76,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 
                 self.count += 1
                 
-                if (self.count >= 50){
+                if (self.count >= 20){
                     var max = String(firstObservation.identifier)
                     var max_i = self.args[max]
                     for item in self.args {

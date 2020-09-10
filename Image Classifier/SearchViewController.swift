@@ -19,10 +19,13 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     let textMlmodel = TextClassifier()
     let categroy = ["1": "可回收垃圾", "2": "有害垃圾", "4": "湿垃圾", "8": "干垃圾", "16": "大型垃圾"]
 
-    var text = "布料"
+    var text: String = ""
     
     @IBAction func search(_ sender: Any) {
-        //self.text = textField.text ?? ""
+        
+        if let textfieled = textField.text {
+            self.text = textfieled
+        }
         
         guard let predictionResult = try? textMlmodel.prediction(text: self.text) else {
             fatalError("Predicting errors!")
@@ -30,7 +33,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
 
         if let result = categroy[predictionResult.label] {
             print(result)
-            name.text = "垃圾种类: \(text)"
+            name.text = "垃圾名称: \(text)"
             category.text = "垃圾种类: \(result)"
         }
     }

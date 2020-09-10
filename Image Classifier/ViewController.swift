@@ -32,13 +32,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
         
         captureSession.addInput(input)
-                
+        
         captureSession.startRunning()
         
         let capturePreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         view.layer.addSublayer(capturePreviewLayer)
         capturePreviewLayer.frame = view.frame
-        capturePreviewLayer.bounds.size.height = self.view.bounds.size.height - 200
+        capturePreviewLayer.bounds.size.height = self.view.bounds.size.height
         
         let captureDataOutput = AVCaptureVideoDataOutput()
         captureDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
@@ -54,7 +54,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let imageBuffer: CVPixelBuffer = sampleBuffer.imageBuffer!
         let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
         image = self.convert(cmage: ciimage)
-                
+        
         
         guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
         
@@ -88,8 +88,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                     
                     self.imageClassifierLabel.text = max
                     
-                    self.count = 0
-                    self.args = [:]
+                    self.initMsg()
+                    
                 }
                 
                 
@@ -108,8 +108,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         return image
     }
     
+    func initMsg() {
+        self.count = 0
+        self.args = [:]
+    }
+
+    
     @IBAction func categroy(_ sender: Any) {
         let categroyVC = storyboard!.instantiateViewController(withIdentifier: "CategoryVC") as! CategroyViewController
+        
+        initMsg()
         
         categroyVC.transitioningDelegate = self
         categroyVC.modalPresentationStyle = .fullScreen
@@ -121,14 +129,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 
 extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        initMsg()
+        
         if segue.identifier == "takePhoto" {
             let vc = segue.destination as! DetailViewController
             vc.image = self.image
             vc.name = self.imageClassifierLabel.text
         }
     }
+    
     
 }
 

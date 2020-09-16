@@ -8,14 +8,22 @@
 
 import UIKit
 
-class CategroyViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class CategroyViewController: UIViewController {
     
+    @IBOutlet weak var back: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-    }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(tap:)))
+        back.addGestureRecognizer(tap)
         
+    }
+    
+    @objc func handleTap(tap: UITapGestureRecognizer){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

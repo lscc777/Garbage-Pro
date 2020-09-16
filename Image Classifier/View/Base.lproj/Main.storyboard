@@ -204,14 +204,21 @@
                                     <segue destination="nqU-2c-LMm" kind="presentation" identifier="4" id="N5e-od-bUk"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="WHy-GF-WAF">
+                                <rect key="frame" x="20" y="44" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uHf-pD-EZ7"/>
                     </view>
+                    <connections>
+                        <outlet property="back" destination="WHy-GF-WAF" id="rIz-KL-gWE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlb-05-CtD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247.8260869565217" y="-200.22321428571428"/>
+            <point key="canvasLocation" x="1246.376811594203" y="-200.22321428571428"/>
         </scene>
         <!--Recyclable View Controller-->
         <scene sceneID="oYM-9u-Vr9">
@@ -261,6 +268,7 @@
         <image name="2" width="180" height="180"/>
         <image name="3" width="180" height="180"/>
         <image name="4" width="180" height="180"/>
+        <image name="back" width="50" height="50"/>
         <image name="classifier" width="50" height="50"/>
         <image name="classify" width="50" height="50"/>
         <image name="search1" width="50" height="50"/>

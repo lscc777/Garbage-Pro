@@ -16,9 +16,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var image: UIImage?
     
-    var args = Dictionary<String,Int>()
-    var count = 0
-    
     @IBOutlet weak var imageClassifierLabel: UILabel!
     
     override func viewDidLoad() {
@@ -68,31 +65,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             DispatchQueue.main.async {
                 
-                if var iter = self.args[String(firstObservation.identifier)]{
-                    iter += 1
-                }else{
-                    self.args.updateValue(1, forKey: String(firstObservation.identifier))
-                }
-                
-                self.count += 1
-                
-                if (self.count >= 10){
-                    var max = String(firstObservation.identifier)
-                    var max_i = self.args[max]
-                    for item in self.args {
-                        if item.value > max_i! {
-                            max = item.key
-                            max_i = item.value
-                        }
-                    }
-                    
-                    self.imageClassifierLabel.text = max
-                    
-                    self.initMsg()
-                    
-                }
-                
-                
+                self.imageClassifierLabel.text = String(firstObservation.identifier)
+                                
             }
             
         }
@@ -105,8 +79,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBAction func categroy(_ sender: Any) {
         let categroyVC = storyboard!.instantiateViewController(withIdentifier: "CategoryVC") as! CategroyViewController
         
-        initMsg()
-        
         categroyVC.transitioningDelegate = self
         categroyVC.modalPresentationStyle = .fullScreen
         present(categroyVC, animated: true, completion: nil)
@@ -117,8 +89,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 
 extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        initMsg()
-        
         if segue.identifier == "takePhoto" {
             let vc = segue.destination as! DetailViewController
             vc.image = self.image
@@ -134,10 +104,5 @@ extension ViewController {
         return image
     }
     
-    func initMsg() {
-        self.count = 0
-        self.args = [String:Int]()
-    }
-
 }
 
